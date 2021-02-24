@@ -40,45 +40,20 @@ R = m
 cobidic = []
 temp = []
 indexs = []
-for i in range(n-1,k,-1): 
-    value = comb(i,k)
-    if value <= R:
-        temp.append(value)
-        indexs.append(i)
-max_value = max(temp)
-max_index = temp.index(max_value)
-cobidic.append(indexs[max_index])
-R = R - max_value
-r = 2
-sk = indexs[max_index]
-print("R = ",R)
-for i in range(0,k):
-    s = n-1
-    for j in range(s-1,k-r-1,-1):
-        temp.cl
 
-
-
-
-
-
-'''while R != 0  and r <= k:
-    temp.clear()
-    indexs.clear()
-    for i in range(sk-1,k-r-1,-1):
-        value = comb(i,r)
+s = n
+for i in range(1,k+1):
+   ''' print("R = ",R)'''
+    for j in range(s-1,k-i-1,-1):
+        value = comb(j,k-i+1)
+        #print("value = ",value) 
         if value <= R:
-            temp.append(value)
-            indexs.append(i)
-    #print(temp)
-    #print(indexs)
-    max_value = max(temp)
-    max_index = temp.index(max(temp))
-    cobidic.append(indexs[max_index])
-    sk = indexs[max_index]
-    R = R - max_value
-    r = r+1
-    print(cobidic)
-if r <= k:
-    cobidic.append(0)'''
-print(cobidic)
+            '''print("value = ",value) 
+                                                print("j = ",j)'''
+            cobidic.append(j)
+            R = R-value
+            s = j
+            break
+
+
+print("cobidic = ",cobidic)
