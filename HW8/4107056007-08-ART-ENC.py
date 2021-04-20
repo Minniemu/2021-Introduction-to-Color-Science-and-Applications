@@ -19,8 +19,8 @@ for i in range(len(lst)):
     N = im.shape[0]
     y,x = meshgrid(range(N),range(N))
     if str(lst2[i]) == '+':
-        xmap = (2*x+y) % N
-        ymap = (x+y) % N
+        xmap = (x+y) % N
+        ymap = (x+2*y) % N
     else:
         xmap = (2*x-y) % N
         ymap = (y-x) % N
